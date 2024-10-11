@@ -1,7 +1,10 @@
-// app.js
 const express = require('express');
+const cors = require('cors'); // Import the CORS middleware
 const app = express();
 const PORT = process.env.PORT || 3000;
+
+// Use CORS middleware
+app.use(cors());
 
 app.get('/', (req, res) => {
     res.send('Hello, Docker! This is a sample change! This is version 2');
