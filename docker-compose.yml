@@ -8,11 +8,12 @@
          - PORT=3000
        volumes:
          - ./backend:/usr/src/app
+         - /usr/src/app/node_modules
        restart: always
 
      frontend:
        build:
          context: ./frontend
        ports:
-         - "80:80"
+         - "5012:80"
        restart: always
