@@ -15,5 +15,5 @@
        build:
          context: ./frontend
        ports:
-         - "80:80"
+         - "5012:80"
        restart: always
