@@ -9,6 +9,9 @@
 
    # Install dependencies
    RUN npm install
+   # Pass .env variables to the build process
+   ARG REACT_APP_API_URL
+   ENV REACT_APP_API_URL=$REACT_APP_API_URL
 
    # Copy the rest of the application code
    COPY . .

@@ -6,6 +6,7 @@
          - "3000:3000"
        environment:
          - PORT=3000
+         - FRONTEND_URL=${FRONTEND_URL}
        volumes:
          - ./backend:/usr/src/app
          - /usr/src/app/node_modules
@@ -14,6 +15,8 @@
      frontend:
        build:
          context: ./frontend
+         args:
+           REACT_APP_API_URL: ${REACT_APP_API_URL}
        ports:
          - "5012:80"
        restart: always

@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 
 function App() {
+  const apiUrl = process.env.REACT_APP_API_URL;
   const [message, setMessage] = useState('');
 
   const callBackendAPI = async () => {
     try {
-      const response = await fetch('http://localhost:3000/secret');
+      console.log(apiUrl);
+      const response = await fetch(`${apiUrl}/secret`);
       const data = await response.text();
       setMessage(data);
     } catch (error) {
