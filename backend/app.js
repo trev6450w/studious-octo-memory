@@ -7,11 +7,11 @@ const PORT = process.env.PORT || 3000;
 app.use(cors());
 
 app.get('/', (req, res) => {
-    res.send('Hello, Docker! This is a sample change! This is version 2');
+    res.send('Hello, From the first application!');
 });
 
 app.get('/secret', (req, res) => {
-    res.send('You found a new secret!');
+    res.send('You found a new secret! I am the first application!');
 });
 
 app.listen(PORT, () => {
