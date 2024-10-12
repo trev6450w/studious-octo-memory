@@ -19,7 +19,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Hello World, this is a test</h1>
+        <h1>Test 2</h1>
         <button onClick={callBackendAPI}>Call Backend</button>
         <p>{message}</p>
       </header>
